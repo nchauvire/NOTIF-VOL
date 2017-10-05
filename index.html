@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>tchat</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+
+</head>
+<div class="row">
+  <div class="col-md-2">
+    <ul class="list-group" id="users">
+      <li class="text-center list-group-item-success">Utilisateur connecté</li>
+    </ul>
+  </div>
+  <div class="col-md-10">
+
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6 text-center">
+        <div id="login" >
+          <form action="" id="loginform" class="jumbotron">
+            <h1>Bienvenue</h1>
+            <p>Ceci est un test de tchat pour node js</p>
+            <input type="text" name="login" id="username" placeholder="nom d'utilisateur">
+            <input type="mail" name="mail" id="mail" placeholder="email">
+            <input type="submit" value="envoyer">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row"><div class="col-md-12">
+      <form action="" id="form">
+        <div id="messages">
+          <div class="message" id="msgtpl" style="display: none">
+            <!--<img src="{{user.avatar}}">-->
+            <div class="info">
+              <p><strong>{{user.username}}</strong></p>
+              <p>{{message}}</p>
+              <span class="date">{{h}}:{{m}}</span>
+            </div>
+          </div>
+        </div>
+        <input type="text" id="message" class="text">
+        <input type="submit" value="envoyer le message" class="submit">
+      </form>
+    </div></div>
+  </div>
+</div>
+
+
+
+
+<body>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+<script type="text/javascript" src="node_modules/mustache/mustache.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/client.js"></script>
+
+</body>
+</html>
